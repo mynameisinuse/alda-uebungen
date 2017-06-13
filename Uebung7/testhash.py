@@ -17,11 +17,11 @@ def checkfilesums(path: str):
 
 if __name__ == "__main__":
     import itertools as it
-    s = [chr(33+9-i)+chr(i*23) for i in range(2,c+1)]
+    s = [chr(33+9-i)+chr(i*23) for i in range(2,10)]
     
-    with open('collision.txt','w') as f:
+    with open('collisions.txt','w') as f:
         result = it.product(s, repeat=2)
         for i in result:
             f.write(i[0]+i[1]+'\n')
 
-    checkfilesums("collision.txt")
+    checkfilesums("collisions.txt")
